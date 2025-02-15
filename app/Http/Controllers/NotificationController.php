@@ -28,9 +28,17 @@ class NotificationController extends Controller
         return response()->json(
             [
                 "Email with binding & constructor injection of DI" => $this->messageService->send("Emailed by constructor injection"),
-                "SMS with contextual binding injection of DI" => $this->notifyService->send("SMS by contextual binding")
+                "SMS with contextual binding injection of DI" => $this->notifyService->send("")
             ]
         );
+    }
+
+    //Method Injection (MI)
+    public function sendNotificationWithMI(MessageService $messageService)
+    {
+        return response()->json([
+            'message' => $messageService->send("Welcome to Dependency Injection example by email")
+        ]);
     }
     
 }
