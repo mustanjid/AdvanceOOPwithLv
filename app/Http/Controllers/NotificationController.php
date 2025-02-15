@@ -37,7 +37,7 @@ class NotificationController extends Controller
     public function sendNotificationWithMI(MessageService $messageService)
     {
         return response()->json([
-            'message' => $messageService->send("Welcome to Dependency Injection example by email")
+            'message' => $messageService->send("Emailed by method injection")
         ]);
     }
     

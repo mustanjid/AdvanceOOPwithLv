@@ -9,3 +9,5 @@ Route::get('/', function () {
 
 // this route will show us the notification
 Route::get('/notification', [NotificationController::class, 'sendNotification']);
+
+Route::get('/notificationMI', [NotificationController::class, 'sendNotificationWithMI']);
