@@ -4,8 +4,9 @@ namespace App\Models;
 
 use App\Traits\DriveTrait;
 use App\Traits\SailTrait;
+use App\Models\Vehicle;
 
-class AmphibiousVehicle {
+class AmphibiousVehicle extends Vehicle{
 	//Trait helps to share multiple behaviours at the same time easily
 	use DriveTrait, SailTrait;
 }
