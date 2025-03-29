@@ -3,7 +3,8 @@
 namespace App\Models;
 
 use App\Traits\SailTrait;
+use App\Models\Vehicle;
 
-class Boat {
+class Boat extends Vehicle{
 	use SailTrait;
 }
