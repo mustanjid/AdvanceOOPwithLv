@@ -29,7 +29,7 @@ git checkout Trait  # Switch to the Trait branch
 ### Install Dependencies
 
 ```bash
-composer install # Switch to the Trait branch
+composer install
 ```
 
 ### Set Up Environment
