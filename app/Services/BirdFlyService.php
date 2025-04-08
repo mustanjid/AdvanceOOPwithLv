@@ -2,16 +2,19 @@
 
 namespace App\Services;
 
-class Bird
+class BirdFlyService
 {
-    public function __call($name, $arguments)
-    {
-        if ($name === 'fly') {
-            if (count($arguments) == 0) {
-                return "Flying normally\n";
-            } elseif (count($arguments) == 1) {
-                return "Flying at speed: {$arguments[0]}\n";
-            }
-        }
-    }
+   public function __call($function, $arguments)
+   {
+	   if($function === "fly"){
+		   if (count($arguments) === 0){
+			   return "The bird is flying normally.";
+		   }elseif(count($arguments) === 1){
+			   return "The bird is flying at {$arguments[0]} speed";
+		   }elseif(count($arguments) === 2){
+			   return "The bird is flying at {$arguments[0]} speed in the {$arguments[1]}";
+		   }
+	   }
+	   return "Method does not exist";
+   }
 }
